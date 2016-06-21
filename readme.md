@@ -49,10 +49,11 @@ Expected Output:
 ### Considerations 
 
 What happens if the rover tries to move off the plateau? 
-Can 2 rovers occupy the same position? 
+Assumes that two rovers can be in the same position at the same time. 
 Should entering the moves be interactive or all at once? 
+Should there be a default direction?
 
 ### Instructions
-* Ruby Version 2.1.2
+* Ruby Version 2.3.1
 * run `bundle install` in the console
 * To run the tests run `rspec spec/plateau_spec.rb` and `rspec spec/rover_spec.rb`

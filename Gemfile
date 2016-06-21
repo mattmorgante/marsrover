@@ -1,4 +1,4 @@
+source "https://rubygems.org"
+ruby "2.3.1"
 
-require 'rubygems'
-require 'bundler/setup'
 gem 'rspec', '~> 3.4'
