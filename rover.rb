@@ -1,15 +1,13 @@
 class Rover
 
-  # the directions are a loop, passing through the next value depending on left or right
-  DIRECTIONS = ["n", "e", "s", "w"]
-
   attr_accessor :x_coordinate, :y_coordinate, :direction
 
 
-  def initialize(x_coordinate =0, y_coordinate = 0, direction = "N")
-    @x_coordinate = x_coordinate.to_i
-    @y_coordinate = y_coordinate.to_i
-    @direction = direction
+  def initialize(start_position)
+    position = start_position.split
+    self.x_coordinate = position[0].to_i
+    self.y_coordinate = position[1].to_i
+    self.direction = position[2]
   end 
 
   def display_location
