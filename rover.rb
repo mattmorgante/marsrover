@@ -1,13 +1,15 @@
-class Rover
+require_relative 'plateau.rb'
+class Rover < Plateau
 
   attr_accessor :x_coordinate, :y_coordinate, :direction
 
 
-  def initialize(start_position)
+  def initialize(plateau, start_position)
     position = start_position.split
     self.x_coordinate = position[0].to_i
     self.y_coordinate = position[1].to_i
     self.direction = position[2]
+    super(plateau)
   end 
 
   def display_location
@@ -70,8 +72,18 @@ class Rover
     when "W"
       @x_coordinate -= 1
     end 
-    # valid_move?(@x_coordinate, @y_coordinate)
+    valid_move?(@x_coordinate, @y_coordinate)
+    return self.display_location
   end
+
+  def valid_move?(x, y)
+    if (x <= @x_max) and (x >= @x_min) and (y <= @y_max) and (y >= @y_min)
+      return true 
+    else 
+      abort("you tried to move off the plateau")
+    end 
+  end 
+
 end 
 
 
