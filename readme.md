@@ -45,3 +45,14 @@ Expected Output:
 1 3 N
 
 5 1 E
+
+### Considerations 
+
+What happens if the rover tries to move off the plateau? 
+Can 2 rovers occupy the same position? 
+Should entering the moves be interactive or all at once? 
+
+### Instructions
+* Ruby Version 2.1.2
+* run `bundle install` in the console
+* To run the tests run `rspec spec/plateau_spec.rb` and `rspec spec/rover_spec.rb`
