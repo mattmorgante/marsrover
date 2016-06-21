@@ -48,12 +48,12 @@ Expected Output:
 
 ### Considerations 
 
-What happens if the rover tries to move off the plateau? 
-Assumes that two rovers can be in the same position at the same time. 
-Should entering the moves be interactive or all at once? 
-Should there be a default direction?
+* What happens if the rover tries to move off the plateau? If the Rover moves off the plateau, an abort message is given and the command is rejected.
+* The app sssumes that two rovers can be in the same position at the same time
+* Rover inherits from plateau to pass the plateau size(x, y) to the valid_move? method. With more time I'd refactor this. 
 
 ### Instructions
 * Ruby Version 2.3.1
 * run `bundle install` in the console
+* run `ruby rover_runner.rb` to get started
 * To run the tests run `rspec spec/plateau_spec.rb` and `rspec spec/rover_spec.rb`

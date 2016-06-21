@@ -9,12 +9,4 @@ class Plateau
     @y_min = 0
   end 
 
-  def valid_move?(x, y)
-    if (x <= @x_max) and (x >= @x_min) and (y <= @y_max) and (y >= @y_min)
-      return true 
-    else 
-      abort("you tried to move off the plateau")
-    end 
-  end 
-
 end 
